@@ -24,19 +24,15 @@ Django’s origins have shaped the culture of its open source community. Because
 
 ### Linux
 ```
-sudo apt-get install python
+$ sudo apt-get install python
 ```
-
-
-
-
 
 ## Running a server
 
 -> Running a server in default mode, it's most probably set to 127.0.0.1:8000, that's where you can access it via a web browser.
 
 ```
-$python manage.py runserver
+$ python manage.py runserver
 ```
 
 -> Running a server at a specific port, say you're running another application on the present server, you can run your project's server at a port you specified by supplying it as an argument.
