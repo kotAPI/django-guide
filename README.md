@@ -1,11 +1,13 @@
 # django-guide
-Unofficial guide written by me :D
+Guide to get you started with Django with minimal effort, as soon as possible.
 
 ![django-guide](img/django.jpg)
 
 ## Contents
-1. [History](#history)
-2. [Installing Python](#installing-python)
+[History](#history)
+
+[Installing Python](#installing-python)
+
 [Running A Server](#running-a-server)
 
 ## History
