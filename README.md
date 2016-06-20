@@ -57,3 +57,9 @@ python manage.py runserver 0.0.0.0:3000
 #Quit the server with CONTROL-C.
 ```
 
+## URLs
+
+### How to set the homepage in django
+```
+url(r'^$', somefile.somemethod)
+```
