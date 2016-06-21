@@ -122,7 +122,21 @@ TEMPLATES = [
 ]
 ```
 
+Add a context that needs to be rendered in a template, first we write some Django template code in a html file.
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+<h1>This is a template! </h1>
+<p>{{name}}, Welcome to my website</p>
+</body>
+</html>
+```
+And then a context that needs to replace placeholder variables in the template.
 
 ```python
 #views.py
