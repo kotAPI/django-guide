@@ -94,6 +94,8 @@ urlpatterns = [
 ```
 
 ```python
+#views.py
+
 from django.http import HttpResponse
 
 
