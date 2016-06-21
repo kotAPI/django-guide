@@ -63,3 +63,74 @@ python manage.py runserver 0.0.0.0:3000
 ```
 url(r'^$', somefile.somemethod)
 ```
+### Setting urlpatterns and making function based views work
+
+```python
+#urls.py
+"""lenz URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/dev/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+"""
+from django.conf.urls import url
+from django.contrib import admin
+from . import views ## relative inclusion of files, this means from current directory (.) import views.py 
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.url1)
+]
+
+```
+
+```python
+from django.http import HttpResponse
+
+
+def url1(request):
+	return HttpResponse("<h1>This works!</h1>)
+```
+
+
+### Rendering templates via function based views
+#### But first, we need to add template directory to your project path so django knows you have templates that you need to use, go to settings.py and edit the templates dictionary.
+```python
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+```
+
+
+
+```python
+#views.py
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def url1(request):
+	context= {"name":"Pranay"}
+	template = "index.html"
+	return render(request,template,context)
+```
