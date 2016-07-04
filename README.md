@@ -8,7 +8,11 @@ Guide to get you started with Django with minimal effort, as soon as possible.
 
 [Installing Python](#installing-python)
 
+[Virtual Environment](#virtual-environment)
+
 [Running A Server](#running-a-server)
+
+
 
 ## History
 
@@ -29,6 +33,53 @@ Django’s origins have shaped the culture of its open source community. Because
 $ sudo apt-get install python
 ```
 
+
+## Virtual Environment
+
+### Installing a Virtual Environment
+```
+pip install virtualenv
+```
+### Setting up a virtual environment
+```
+virtualenv myNewProject
+//starts a new project folder with the name 'myNewProject'
+```
+### Running the virtual environment
+```
+//cd into the folder and type
+source bin/activate
+//This should enter you into the virutual environment
+```
+### Check your django dependencies (installed)
+```
+pip freeze
+
+Django==1.9.7
+PAM==0.4.2
+Pillow==2.3.0
+Twisted-Core==13.2.0
+Twisted-Web==13.2.0
+apt-xapian-index==0.45
+argparse==1.2.1
+beautifulsoup4==4.2.1
+chardet==2.0.1
+colorama==0.2.5
+command-not-found==0.3
+configobj==4.7.2
+debtagshw==0.1
+...
+```
+### Packaging Django dependencies to requirements.txt file
+```
+// Go to root of your virtualenv and type
+pip freeze > requirements.txt
+```
+### Installing Django dependencies in your virtualenv project
+```
+// go to root of django virtualenv path and type
+pip install requirements.txt
+```
 ## Running a server
 
 -> Running a server in default mode, it's most probably set to 127.0.0.1:8000, that's where you can access it via a web browser.
