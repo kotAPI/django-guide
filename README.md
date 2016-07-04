@@ -37,22 +37,22 @@ $ sudo apt-get install python
 ## Virtual Environment
 
 ### Installing a Virtual Environment
-```
+```python
 pip install virtualenv
 ```
 ### Setting up a virtual environment
-```
+```python
 virtualenv myNewProject
-//starts a new project folder with the name 'myNewProject'
+#starts a new project folder with the name 'myNewProject'
 ```
 ### Running the virtual environment
-```
-//cd into the folder and type
+```python
+#cd into the folder and type
 source bin/activate
-//This should enter you into the virutual environment
+#This should enter you into the virutual environment
 ```
 ### Check your django dependencies (installed)
-```
+```python
 pip freeze
 
 Django==1.9.7
@@ -71,13 +71,13 @@ debtagshw==0.1
 ...
 ```
 ### Packaging Django dependencies to requirements.txt file
-```
-// Go to root of your virtualenv and type
+```python
+# Go to root of your virtualenv and type
 pip freeze > requirements.txt
 ```
 ### Installing Django dependencies in your virtualenv project
-```
-// go to root of django virtualenv path and type
+```python
+# go to root of django virtualenv path and type
 pip install requirements.txt
 ```
 ## Running a server
