@@ -12,6 +12,8 @@ Guide to get you started with Django with minimal effort, as soon as possible.
 
 [Running A Server](#running-a-server)
 
+[Setting up MySQL](#setting-up-mysql)
+
 
 
 ## History
@@ -201,3 +203,29 @@ def url1(request):
 	template = "index.html"
 	return render(request,template,context)
 ```
+
+## Setting Up MySQL
+
+```python
+sudo apt-get install python-dev python3-dev
+sudo apt-get install libmysqlclient-dev
+pip install MySQL-python
+pip install pymysql
+pip install mysqlclient
+
+#http://stackoverflow.com/questions/19189813/setting-django-up-to-use-mysql
+```
+
+#### Creating a database
+Create a database in mysql console and update the name of the database in settings.py
+```python
+#refer to this link
+# http://stackoverflow.com/questions/24462007/how-to-deal-with-this-error-1049-unknown-database-users-ohyunjun-work-astra
+```
+
+
+
+Misc
+Setting up template directory - http://stackoverflow.com/questions/3038459/django-template-path
+Suppose you wanted a template directory for the root app, add the path.join(BASE_DIR, 'template'),
+refer this for better understanding http://stackoverflow.com/questions/3038459/django-template-path
