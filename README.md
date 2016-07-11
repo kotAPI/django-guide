@@ -14,6 +14,10 @@ Guide to get you started with Django with minimal effort, as soon as possible.
 
 [Setting up MySQL](#setting-up-mysql)
 
+[Setting up Static Files](setting-up-static-files)
+
+[Setting up Template directories](setting-up-template-directories)
+
 
 
 ## History
@@ -222,8 +226,23 @@ Create a database in mysql console and update the name of the database in settin
 #refer to this link
 # http://stackoverflow.com/questions/24462007/how-to-deal-with-this-error-1049-unknown-database-users-ohyunjun-work-astra
 ```
+## Setting up static files
 
+Add the following to settings.py
+```python
+STATIC_URL = '/static/'
 
+# the static folder of the django project must be placed in the root(where the manage.py file lies)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'static'),# don't forget the trailing comma
+)
+```
+
+## Setting up Template directories
+```python
+# Python automatically detects the 'template' folders in respective apps,
+# you can simply use render(request,'index.html',{}) - where index.html is located in app/template/index.html
+```
 
 Misc
 Setting up template directory - http://stackoverflow.com/questions/3038459/django-template-path
