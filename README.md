@@ -14,9 +14,9 @@ Guide to get you started with Django with minimal effort, as soon as possible.
 
 [Setting up MySQL](#setting-up-mysql)
 
-[Setting up Static Files](setting-up-static-files)
+[Setting up Static Files](#setting-up-static-files)
 
-[Setting up Template directories](setting-up-template-directories)
+[Setting up Template directories](#setting-up-template-directories)
 
 
 
