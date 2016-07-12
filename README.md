@@ -241,7 +241,7 @@ STATICFILES_DIRS = (
 ## Setting up Template directories
 ```python
 # Python automatically detects the 'template' folders in respective apps,
-# you can simply use render(request,'index.html',{}) - where index.html is located in app/template/index.html
+# you can simply use render(request,'index.html',{}) - where index.html is located in app/templates/index.html
 ```
 
 Misc
