@@ -211,6 +211,7 @@ def url1(request):
 ## Setting Up MySQL
 
 ```python
+sudo apt-get install mysql-server
 sudo apt-get install python-dev python3-dev
 sudo apt-get install libmysqlclient-dev
 pip install MySQL-python
