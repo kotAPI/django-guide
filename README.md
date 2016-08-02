@@ -86,6 +86,10 @@ pip freeze > requirements.txt
 # go to root of django virtualenv path and type
 pip install requirements.txt
 ```
+
+### FUCKING IMPORTANT!
+ Just make sure none of your folders are named with spaces (the parent folder that holds the virtualenv files). It's gonna throw a pip file not found error for no reason. Make sure you name your folders without spaces. Ok. 
+
 ## Running a server
 
 -> Running a server in default mode, it's most probably set to 127.0.0.1:8000, that's where you can access it via a web browser.
