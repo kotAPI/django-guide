@@ -1,4 +1,4 @@
-# django-guide
+# django-guide abcd
 Guide to get you started with Django with minimal effort, as soon as possible.
 
 ![django-guide](img/django.jpg)
