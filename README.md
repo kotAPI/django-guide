@@ -58,6 +58,13 @@ virtualenv myNewProject
 source bin/activate
 #This should enter you into the virutual environment
 ```
+
+### Start Django Project
+```python
+django-admin startproject myDjangoProject
+```
+
+
 ### Check your django dependencies (installed)
 ```python
 pip freeze
